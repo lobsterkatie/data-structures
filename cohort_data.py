@@ -13,11 +13,17 @@ def unique_houses(filename):
             ])
 
     """
+    student_list_file = open(filename)
 
     houses = set()
 
-    # Code goes here
-
+    for line in student_list_file:
+        data = line.split("|")
+        houses.add(data[2])
+    
+    #get rid of empty house
+    houses.remove("")
+    
     return houses
 
 
