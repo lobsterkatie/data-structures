@@ -23,7 +23,7 @@ def unique_houses(filename):
     
     #get rid of empty house
     houses.remove("")
-    
+
     return houses
 
 
@@ -43,6 +43,26 @@ def sort_by_cohort(filename):
     spring_15 = []
     summer_15 = []
     tas = []
+
+    student_list_file = open(filename)
+
+    for line in student_list_file:
+        data = line.split("|")
+
+        #create full name string
+        first_name = data[0]
+        last_name = data[1]
+        full_name = first_name + " " + last_name
+
+        cohort = data[4]
+
+        if cohort == "Winter 2015":
+            winter_15.append(full_name)
+        if cohort == "Spring 2015":
+            spring_15.append(full_name)
+        if cohort == "Summer 2015":
+            summer_15.append(full_name)
+        if 
 
     # Code goes here
 
