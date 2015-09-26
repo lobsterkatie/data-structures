@@ -19,11 +19,9 @@ def unique_houses(filename):
 
     for line in student_list_file:
         data = line.split("|")
-        houses.add(data[2])
+        if data[2] != "":
+            houses.add(data[2])
     
-    #get rid of empty house
-    houses.remove("")
-
     return houses
 
 
@@ -62,10 +60,11 @@ def sort_by_cohort(filename):
             spring_15.append(full_name)
         if cohort == "Summer 2015":
             summer_15.append(full_name)
-        if 
+        
 
-    # Code goes here
-
+#find all people who have never been in a cohort (subset of instructors) and then find all people who 
+# have a cohort and are also advisors and that equals (subset of TA's, and also includes Katie, who is actually
+    #an instructor!!!!!)
     return all_students
 
 
